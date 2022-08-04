@@ -1,0 +1,16 @@
+
+
+.Nav:hover {
+    color:#Ff7a00 !important;
+    transform: translateY(-2px);
+    border-bottom: 2px solid #Ff7a00;
+  }
+  
+  .Nav {  
+    margin-right: 20px;
+    
+  }
+  .Nav:active{
+    border-bottom: 2px solid #Ff7a00;
+    transition: border-bottom .5s ease-in-out;
+  }

@@ -1,0 +1,18 @@
+.main{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.line{
+    border-left: 2px solid black;
+    height: 550px;
+    margin-top: 50px;
+}
+.button{
+display:none;
+}
+.maindiv:hover .button{
+    display:inline
+}
