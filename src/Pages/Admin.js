@@ -10,9 +10,12 @@ function Admin() {
     >Shooping</Button>
         <h2 style={{textAlign: 'center',fontWeight:'600'}}>KKV Textiles</h2>
   
-        <Button variant="outlined" style={{marginTop:'220px',color:'black',border:'1px solid #Ff7a00'}}
+        <Button variant="outlined" style={{marginTop:'200px',color:'black',border:'1px solid #Ff7a00'}}
         onClick={()=>window.location.href="/Addproduct"}
         > Add Product</Button>
+         <Button variant="outlined" style={{marginTop:'20px',color:'black',border:'1px solid #Ff7a00'}}
+        onClick={()=>window.location.href="/Manageproduct"}
+        > Manage Product</Button>
         <Button variant="outlined" style={{marginTop:'25px',color:'black',border:'1px solid #Ff7a00'}}
         onClick={()=>window.location.href="/manageorder"}
         > Manage Orders</Button>

@@ -1,71 +1,74 @@
-import './App.css';
+import "./App.css";
 
 import Home from "./Pages/Home.js";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { BrowserRouter as Router,Route } from "react-router-dom";
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
-import Auth from './Pages/Auth';
-import Temp from './Pages/Temp';
-import Product from './Pages/Product';
-import Cart from './Pages/Cart';
-import Shopping from './Pages/Shopping';
-import Nav from './Pages/Nav';
-import Admin from './Pages/Admin';
-import Addproduct from './Pages/Addproduct';
-import Manageproduct from './Pages/Manageproduct';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch } from "react-router-dom/cjs/react-router-dom.min";
+import Auth from "./Pages/Auth";
+import Temp from "./Pages/Temp";
+import Product from "./Pages/Product";
+import Cart from "./Pages/Cart";
+import Shopping from "./Pages/Shopping";
+import Nav from "./Pages/Nav";
+import Admin from "./Pages/Admin";
+import Addproduct from "./Pages/Addproduct";
+import Manageproduct from "./Pages/Manageproduct";
+import Modifyproduct from "./Pages/Modifyproduct";
+import Editproduct from "./Pages/Editproduct";
 
 function App() {
-
   const theme = createTheme({
     palette: {
       primary: {
-        main: '#Ff7a00',
+        main: "#Ff7a00",
       },
       secondary: {
-       main: '#EEC312',
-     },
- 
+        main: "#EEC312",
+      },
     },
-    typography:{
-       fontFamily:'Poppins'
+    typography: {
+      fontFamily: "Poppins",
     },
-    
   });
 
   return (
-    <div >
-    <ThemeProvider theme={theme}>   
-      <Router>     
-      <Switch> 
-      <Route exact path="/admin">
+    <div>
+      <ThemeProvider theme={theme}>
+        <Router>
+          <Switch>
+            <Route exact path="/admin">
               <Admin />
-          </Route>
-          <Route exact path="/Addproduct">
+            </Route>
+            <Route exact path="/Addproduct">
               <Addproduct />
-          </Route>
-          <Route exact path="/manageorder">
+            </Route>
+            <Route exact path="/Manageproduct">
+              <Modifyproduct />
+            </Route>
+            <Route exact path="/manage/:id">
+              <Editproduct/>
+            </Route>
+            <Route exact path="/manageorder">
               <Manageproduct />
-          </Route>
-      <Route exact path="/shopping">
-            <Shopping />
-          </Route> 
-      <Route exact path="/cart">
-            <Cart />
-          </Route>
-        <Route exact path="/login">      
+            </Route>
+            <Route exact path="/shopping">
+              <Shopping />
+            </Route>
+            <Route exact path="/cart">
+              <Cart />
+            </Route>
+            <Route exact path="/login">
               <Auth />
-          </Route>
-          
-          <Route exact path="/">
+            </Route>
+            <Route exact path="/">
               <Nav />
-          </Route>
-          <Route exact path="/:id">
-              <Product/>
-          </Route>
-         
+            </Route>
+            <Route exact path="/:id">
+              <Product />
+            </Route>
           </Switch>
-      </Router>         
-    </ThemeProvider>
+        </Router>
+      </ThemeProvider>
     </div>
   );
 }
